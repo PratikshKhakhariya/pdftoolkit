@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, send_file, redirect, url_for,
 import os
 from werkzeug.utils import secure_filename
 from tools import merge, split, compress, pdf2jpg, jpg2pdf, pdf2docx
-from tools import word2pdf_tool as docx2pdf
 
 app = Flask(__name__)
 app.secret_key = 'supersecretkey'
