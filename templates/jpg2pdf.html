@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}JPG to PDF{% endblock %}
+{% block content %}
+<div class="tool-container">
+  <h2 class="mb-4">JPG to PDF</h2>
+  <form method="POST" enctype="multipart/form-data" id="jpg2pdfForm">
+    <div class="mb-3">
+      <label class="form-label">Upload JPG Images</label>
+      <input type="file" class="form-control" name="images" multiple accept="image/jpeg" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Convert</button>
+    <div class="loader mt-4" id="loader" style="display: none;"></div>
+  </form>
+</div>
+{% endblock %}

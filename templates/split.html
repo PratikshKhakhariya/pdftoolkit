@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Split PDF{% endblock %}
+{% block content %}
+<div class="tool-container">
+  <h2 class="mb-4">Split PDF</h2>
+  <form method="POST" enctype="multipart/form-data" id="splitForm">
+    <div class="mb-3">
+      <label class="form-label">Upload PDF</label>
+      <input type="file" class="form-control" name="pdf" accept="application/pdf" required>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label class="form-label">Start Page</label>
+        <input type="number" class="form-control" name="start" min="1" required>
+      </div>
+      <div class="col">
+        <label class="form-label">End Page</label>
+        <input type="number" class="form-control" name="end" min="1" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary mt-4">Split</button>
+    <div class="loader mt-4" id="loader" style="display: none;"></div>
+  </form>
+</div>
+{% endblock %}

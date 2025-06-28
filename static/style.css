@@ -1,0 +1,63 @@
+.tool-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.upload-area {
+    border: 2px dashed #bbb;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.upload-area:hover {
+    background-color: #f0f0f0;
+}
+
+.upload-message p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.loader {
+    border: 4px solid #eee;
+    border-top: 4px solid #007bff;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-color: #f8f9fa;
+}
+
+body.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #f1f1f1;
+  --card-color: #2c2c2c;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.tool-container {
+  background-color: var(--card-color);
+  color: var(--text-color);
+}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Word to PDF{% endblock %}
+{% block content %}
+<div class="tool-container">
+  <h2 class="mb-4">Word to PDF</h2>
+  <form method="POST" enctype="multipart/form-data" id="docx2pdfForm">
+    <div class="mb-3">
+      <label class="form-label">Upload DOCX File</label>
+      <input type="file" class="form-control" name="docx" accept=".docx" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Convert</button>
+    <div class="loader mt-4" id="loader" style="display: none;"></div>
+  </form>
+</div>
+{% endblock %}
